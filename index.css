@@ -1,0 +1,259 @@
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('fonts/TTLakes-Regular.eot');
+    src: local('TT Lakes Regular'), local('fonts/TTLakes-Regular'),
+        url('fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/TTLakes-Regular.woff') format('woff'),
+        url('fonts/TTLakes-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('fonts/TTLakes-Medium.eot');
+    src: local('TT Lakes Medium'), local('fonts/TTLakes-Medium'),
+        url('fonts/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/TTLakes-Medium.woff') format('woff'),
+        url('fonts/TTLakes-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes Compressed';
+    src: url('fonts/TTLakesCompressed-Bold.eot');
+    src: local('TT Lakes Compressed Bold'), local('fonts/TTLakesCompressed-Bold'),
+        url('fonts/TTLakesCompressed-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/TTLakesCompressed-Bold.woff') format('woff'),
+        url('fonts/TTLakesCompressed-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    min-width: 320px;
+    max-width: 1120px;
+    margin: 0 auto;
+    background: #f8f8f8 ;
+    font-family: 'TT Lakes';
+    width: 100%;
+}
+
+
+/* sidemenu______________________________________________________________________________________________*/
+
+
+.sidemenu__button{
+    display: flex;
+    flex-flow: row nowrap;
+    list-style-type: none;
+    justify-content: space-between;
+    margin-left: 16px;
+    overflow: scroll;
+}
+
+.sidemenu button{
+    font-size: 16px;
+    padding: 9px 22px 7px 22px;
+    letter-spacing: -0.2px;
+    background-color: #f8f8f8FF;
+    color: #7E7E82;
+    border: 0;
+    white-space: nowrap;
+}
+
+.sidemenu__button button:hover{
+    background: #FFFFFF;
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;;
+    /* transform: matrix(-1, 0, 0, 1, 0, 0); */
+}
+
+
+/*topmenu________________________________________________________________________________________*/
+
+.topmenu {
+    display: flex;
+    width: 100%;
+    background-color: #FFFFFF;
+    justify-content: space-around;
+    padding-bottom: 24px;
+    padding-top: 24px;
+    gap: 20px;
+}
+
+.burger {
+    margin-left: 16px;
+}
+
+.checkstatus {
+    margin-right: 16px;
+}
+
+.divider1 {
+    display: none;
+}
+
+.call {
+    display: none;
+}
+
+.chat {
+    display: none;
+}
+
+.profile {
+    display: none;
+}
+
+
+/* title__________________________________________________________________________________________________*/
+
+
+.title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title h1 {
+    border-left: 3px solid #41F6D7;
+    padding-left: 33px;
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: bold;
+    letter-spacing: -0.6px;
+}
+
+.title__button {
+    display: flex;
+    font-size: 16px;
+    line-height: 24px;
+    align-items: center;
+}
+
+.title__button .titel__icon{
+    width: 40px;
+    height: 40px;
+    margin-right: 32px;
+    display: none;
+}
+
+.title__button a{
+    font-weight: 500;
+    padding-right: 8px;
+    font-weight: 500;
+    display: none;
+    letter-spacing: -0.2px;
+}
+
+
+
+/*content________________________________________________________________________________________*/
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.content__Glavph {
+    border-radius: 5px;
+    order: 1;
+}
+
+.content__iconstr {
+    width: 15px;
+    height: 15px;
+    padding-top: 5px;
+    margin-left: 24px;
+    margin-right: 10px;
+}
+
+.content__text {
+    margin-left: 16px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #1B1C21;
+    text-align: left;
+} 
+
+.content a {
+    
+    margin-bottom: 15px;
+}
+
+.content__more {
+    display: flex;
+}
+
+
+/*media_____________________________________________________________________________________*/
+
+
+@media (min-width:768px) and (max-width:1199px)  {
+
+    .call {
+        display: inline-block;
+    }
+    
+    .chat {
+        display: inline-block;
+    }
+    
+    .profile {
+        display: inline-block;
+    } 
+
+    .divider1 {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .icongps {
+        margin-right: 30%;
+    }
+
+    .content {
+        display: block;
+    }
+
+    .content__Glavph {
+        float: right;
+    }
+}
+
+@media (min-width:1199px) and (max-width:2000px)  {
+
+    .topmenu {
+        display: none;
+    }
+
+    .content {
+        display: block;
+    }
+
+    .content__Glavph {
+        float: right;
+        width: 50%;
+    }
+
+    .title__button .titel__icon {
+        display: inline-block;
+    }
+
+    .title__button a {
+        display: inline-block;
+    }
+
+    .sidemenu__button {
+        overflow: visible;
+        width: 95%;
+        flex-flow: row wrap;
+    }
+
+}
