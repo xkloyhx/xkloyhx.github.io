@@ -1,3 +1,52 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+
+/*Шрифты и body________________________________________________________________________________________*/
+
+
 @font-face {
     font-family: 'TT Lakes';
     src: url('fonts/TTLakes-Regular.eot');
@@ -38,7 +87,7 @@
 body{
     min-width: 320px;
     max-width: 1120px;
-    margin: 0 auto;
+    margin: 0 0 0 0;
     background: #f8f8f8 ;
     font-family: 'TT Lakes';
     width: 100%;
@@ -48,12 +97,12 @@ body{
 /* sidemenu______________________________________________________________________________________________*/
 
 
-.sidemenu__button{
+.sidemenu__link{
     display: flex;
     flex-flow: row nowrap;
     list-style-type: none;
     justify-content: space-between;
-    margin-left: 16px;
+    margin: 2% 0 0 2%;
     overflow: scroll;
 }
 
@@ -65,6 +114,7 @@ body{
     color: #7E7E82;
     border: 0;
     white-space: nowrap;
+    text-decoration: none;
 }
 
 .sidemenu__item:hover{
@@ -118,6 +168,7 @@ body{
 .title {
     display: flex;
     justify-content: space-between;
+    margin-top: 3%;
 }
 
 .title__header {
@@ -143,14 +194,19 @@ body{
     display: none;
 }
 
-.title__button a{
+.title__link {
     font-weight: 500;
     padding-right: 8px;
     font-weight: 500;
     display: none;
     letter-spacing: -0.2px;
+    text-decoration: none;
 }
 
+.title__link:visited {
+    color: #1B1C21;
+    ;
+}
 
 
 /*content________________________________________________________________________________________*/
@@ -161,6 +217,8 @@ body{
 }
 
 .content__Glavph {
+    width: 100%;
+    height: 230px;
     border-radius: 5px;
     order: 1;
 }
@@ -169,28 +227,35 @@ body{
     width: 15px;
     height: 15px;
     padding-top: 5px;
-    margin-left: 24px;
-    margin-right: 10px;
 }
 
 .content__text {
-    margin-left: 16px;
+    margin: 2% 5% 0 5%;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.2px;
     color: #1B1C21;
     text-align: left;
+    margin-bottom: 3%;
 } 
 
 .content__link {
-    
-    margin-bottom: 15px;
+    margin: 15px 0 15px 0 ;
+    font-weight: 500;
 }
 
 .content__more {
     display: flex;
 }
 
+.content__text2 {
+    margin-top: 2%;
+    display: none;
+}
+
+.content__text1 {
+    margin-bottom: 2%;
+}
 
 /*media_____________________________________________________________________________________*/
 
@@ -219,27 +284,50 @@ body{
     }
 
     .content {
-        display: block;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
     }
 
     .content__Glavph {
-        float: right;
+        width: 360px;
+        height: 260px;
+        margin: 0 3% 0 0
     }
+
+    .content__text {
+        margin: 2% 0 0 4%;
+        width: 312px;
+        height: 160px;
+    }
+
+    .content__iconstr {
+        margin: 2% 0 0 0;
+    }
+    .content__text2 {
+        display: block;
+    }
+
+    .content__link {
+        margin: 0;
+    }
+    
 }
 
-@media (min-width:1199px) and (max-width:2000px)  {
+@media (min-width:1120px) and (max-width:2000px)  {
 
     .topmenu__icon {
         display: none;
     }
 
     .content {
-        display: block;
+        display: flex;
+        justify-content: center;
     }
 
     .content__Glavph {
-        float: right;
-        width: 50%;
+        width: 532px;
+        height: 284px;
     }
 
     .title__icon {
@@ -250,10 +338,28 @@ body{
         display: inline-block;
     }
 
-    .sidemenu__button {
+    .sidemenu__link {
         overflow: visible;
-        width: 95%;
         flex-flow: row wrap;
     }
 
+    .content__text2 {
+        display: block;
+        margin-bottom: 2%;
+    }
+
+    .content {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+    }
+
+    .content__link {
+        margin: 0;
+    }
+
+    .content__iconstr {
+        margin: 0;
+    }
+    
 }
